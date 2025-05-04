@@ -1,2 +1,0 @@
-# Tehkat.github.io
-StudyWebsite
