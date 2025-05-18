@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tygo Signs | Design & Printing</title>
+  <meta name="description" content="You dream it, we make it. Tygo Signs - Design and Printing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@400&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="logo.png">
+  <style>
+    :root {
+      --color-primary: #673de6;
+      --color-primary-dark: #5025d1;
+      --color-accent: #000000;
+      --color-accent-dark: #d114b3;
+      --color-secondary: #6717c0;
+      --color-bg: #fff;
+      --color-bg-dark: #1d1e20;
+      --color-gray: #727586;
+      --font-primary: 'Roboto', sans-serif;
+      --font-secondary: 'Lato', sans-serif;
+      --font-display: 'Rubik', sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font-secondary);
+      background: var(--color-bg);
+      color: var(--color-bg-dark);
+    }
+    header {
+      background: #000;
+      color: var(--color-accent);
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo {
+      height: 80px;
+      margin-right: 20px;
+    }
+    nav {
+      display: flex;
+      gap: 40px;
+    }
+    nav a {
+      color: var(--color-accent);
+      text-decoration: none;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: var(--color-accent-dark);
+    }
+    .hero {
+      position: relative;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: #000;
+      overflow: hidden;
+    }
+    .hero video, .hero .hero-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      opacity: 0.43;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      color: var(--color-accent);
+      padding: 60px 16px 40px 16px;
+    }
+    .hero-content h1 {
+      font-family: 'Rubik', sans-serif;
+      font-size: 64px;
+      font-weight: 700;
+      margin: 0 0 16px 0;
+      color: var(--color-accent);
+    }
+    .hero-content p {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--color-accent);
+      margin-bottom: 32px;
+    }
+    .hero-content .cta {
+      display: inline-block;
+      background: var(--color-secondary);
+      color: var(--color-accent);
+      font-family: 'Rubik', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 16px 40px;
+      border: none;
+      border-radius: 28px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .hero-content .cta:hover {
+      background: var(--color-accent);
+      color: var(--color-secondary);
+    }
+    .section {
+      padding: 64px 16px;
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 48px;
+    }
+    .section.reverse { flex-direction: row-reverse; }
+    .section-content {
+      flex: 1 1 350px;
+      min-width: 300px;
+    }
+    .section-content h2 {
+      font-family: 'Rubik', sans-serif;
+      font-size: 48px;
+      color: var(--color-secondary);
+      margin-bottom: 16px;
+    }
+    .section-content p {
+      font-size: 19px;
+      color: var(--color-secondary);
+      font-weight: 700;
+    }
+    .section-img {
+      flex: 1 1 350px;
+      min-width: 300px;
+      text-align: center;
+    }
+    .section-img img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .gallery {
+      background: var(--color-accent);
+      padding: 64px 16px;
+    }
+    .gallery h2 {
+      color: #fff;
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 32px;
+      font-family: 'Rubik', sans-serif;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+      background: #fff;
+    }
+    .cta-section {
+      background: url('cta-bg.jpg') center/cover no-repeat;
+      padding: 64px 16px;
+      text-align: center;
+      position: relative;
+    }
+    .cta-section .cta {
+      margin-top: 24px;
+    }
+    footer {
+      background: #fff;
+      color: #222;
+      padding: 40px 16px 24px 16px;
+      border-top: 1px solid #eee;
+      font-size: 16px;
+    }
+    .footer-content {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 48px;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .footer-col {
+      min-width: 220px;
+      flex: 1 1 220px;
+    }
+    .footer-col h4 {
+      margin-bottom: 12px;
+      font-size: 20px;
+      color: var(--color-secondary);
+      font-family: 'Rubik', sans-serif;
+    }
+    .footer-col a {
+      color: var(--color-secondary);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 6px;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover {
+      color: var(--color-accent);
+    }
+    .footer-social {
+      display: flex;
+      gap: 24px;
+      margin-top: 16px;
+    }
+    .footer-social a {
+      color: #222;
+      font-size: 22px;
+      transition: color 0.2s;
+    }
+    .footer-social a:hover {
+      color: var(--color-accent);
+    }
+    @media (max-width: 900px) {
+      .section { flex-direction: column; gap: 32px; }
+      .section.reverse { flex-direction: column; }
+      .footer-content { flex-direction: column; gap: 32px; }
+    }
+    @media (max-width: 600px) {
+      .hero-content h1 { font-size: 40px; }
+      .section-content h2 { font-size: 32px; }
+      .gallery h2 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Tygo Signs Logo" class="logo">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact us</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <video src="RepeatVyNAL.mp4" autoplay muted loop playsinline poster="hero-poster.jpg"></video>
+    <div class="hero-content">
+      <img src="Title.png" alt="Tygo Signs Logo" class="logo" style="height:400px; margin-top:80spx;">>
+      <a href="tel:+27823515533" class="cta">give us a call</a>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-content">
+      <h2>Print that leaves an impression</h2>
+      <p>
+        In a world filled with ordinary prints, we craft something extraordinary. From textured business cards to high-impact packaging, our design and printing services give your brand the depth it deserves. Whether you’re looking for sleek sophistication or bold creativity, we bring your ideas to life—one perfectly pressed detail at a time.
+      </p>
+    </div>
+    <div class="section-img">
+      <img src="section1.jpg" alt="Premium print sample">
+    </div>
+  </section>
+  <section class="section reverse">
+    <div class="section-content">
+      <h2>Designed to stand out</h2>
+      <p>
+        Our team combines creativity and precision to deliver signage and print solutions that get noticed. From eye-catching banners to elegant invitations, Tygo Signs is your partner for quality, impact, and style.
+      </p>
+    </div>
+    <div class="section-img">
+      <img src="Standout.jpg" alt="Creative design sample">
+    </div>
+  </section>
+  <section class="gallery" id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="cup.jpg" alt="Gallery image 1">
+      <img src="Assets/Cup2.jpg" alt="Gallery image 2">
+      <img src="Shirt.jpg" alt="Gallery image 3">
+      <img src="Sign.jpg" alt="Gallery image 4">
+    </div>
+  </section>
+  <section class="cta-section">
+    <h2>Ready to make your mark?</h2>
+    <p>
+      Let’s bring your vision to the surface — literally. Whether you need luxury invitations, premium packaging, or branding that speaks volumes, we’re here to make it happen. Get in touch and let’s design, print, and elevate together.
+    </p>
+    <a href="#contact" class="cta">contact us</a>
+  </section>
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>Address</h4>
+        <p>710 17th Avenue<br>Rietfontein, Pretoria</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contacts</h4>
+        <a href="tel:+27662370131">066 237 0131</a>
+        <a href="mailto:Tygosign@gmail.com">Tygosign@gmail.com</a>
+      </div>
+      <div class="footer-col">
+        <h4>Follow us</h4>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/1HnEB91Tj3/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.63-5.371-12-12-12s-12 5.37-12 12c0 5.989 4.388 10.953 10.125 11.854v-8.386H7.077v-3.468h3.048V9.429c0-3.008 1.79-4.669 4.532-4.669 1.314 0 2.687.235 2.687.235v2.951H15.83c-1.49 0-1.955.925-1.955 1.874v2.253h3.328l-.532 3.468h-2.796v8.386C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          
+          <a href="https://www.instagram.com/tygosigns?igsh=MWw5ZThnZHY3bGpybA==" target="_blank" aria-label="Instagram"><svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12.003 5.848A6.142 6.142 0 005.85 12a6.142 6.142 0 006.152 6.152A6.142 6.142 0 0018.155 12a6.142 6.142 0 00-6.152-6.152zm0 10.152c-2.2 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.8 4-4 4zM19.84 5.596c0 .798-.642 1.435-1.435 1.435a1.435 1.435 0 111.435-1.435zm4.075 1.457c-.091-1.922-.53-3.625-1.939-5.028C20.575.622 18.872.183 16.95.087c-1.981-.112-7.919-.112-9.9 0-1.917.091-3.62.53-5.027 1.933C.614 3.423.18 5.125.084 7.047c-.112 1.981-.112 7.92 0 9.9.091 1.922.53 3.625 1.939 5.028 1.408 1.403 3.105 1.842 5.027 1.938 1.981.112 7.919.112 9.9 0 1.922-.091 3.625-.53 5.027-1.938 1.403-1.403 1.842-3.106 1.939-5.028.112-1.98.112-7.913 0-9.894zm-2.56 12.02a4.049 4.049 0 01-2.28 2.28c-1.58.627-5.328.483-7.073.483-1.746 0-5.499.139-7.073-.482a4.05 4.05 0 01-2.281-2.281c-.626-1.58-.482-5.328-.482-7.073s-.14-5.499.482-7.073a4.05 4.05 0 012.28-2.28c1.58-.627 5.328-.483 7.074-.483 1.745 0 5.498-.139 7.073.482a4.05 4.05 0 012.28 2.281c.627 1.58.482 5.328.482 7.073s.145 5.499-.482 7.073z"/></svg></a>
+          
+          <a href="https://www.tiktok.com/@tygosigns?_t=ZM-8wSgDLYUK4V&_r=1" target="_blank" aria-label="TikTok">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+  <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col" style="text-align:center;">
+        <img src="logo.jpg" alt="Tygo Signs Logo" style="height:200px; margin-top:40spx;">
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:32px; color:#727586; font-size:14px;">
+      &copy; 2024 Tygo Signs. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
