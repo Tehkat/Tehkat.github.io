@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Tygo Signs</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            color: #222;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #222;
+            color: #fff;
+            padding: 1rem 2rem;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 80px;
+            margin-right: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 16px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            background: #ddd;
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Assets\Logo.png" alt="Tygo Signs Logo">
+            <h1>Tygo Signs Gallery</h1>
+        </div>
+        <nav>
+            <a href="index.html">&larr; Back to Home</a>
+        </nav>
+    </header>
+    <main>
+        <div class="gallery" id="gallery">
+        
+            <img data-src="Assets\g1.jpg" alt="Gallery Image 1" loading="lazy">
+            <img data-src="Assets\g2.jpg" alt="Gallery Image 2" loading="lazy">
+            <img data-src="Assets\g3.jpg" alt="Gallery Image 3" loading="lazy">
+            <img data-src="Assets\g4.jpg" alt="Gallery Image 4" loading="lazy">
+            <img data-src="Assets\g5.jpg" alt="Gallery Image 5" loading="lazy">
+            <img data-src="Assets\g6.jpg" alt="Gallery Image 6" loading="lazy">
+            <img data-src="Assets\g7.jpg" alt="Gallery Image 7" loading="lazy">
+            <img data-src="Assets\g8.jpg" alt="Gallery Image 8" loading="lazy">
+            <img data-src="Assets\g9.jpg" alt="Gallery Image 9" loading="lazy">
+            <img data-src="Assets\g10.jpg" alt="Gallery Image 10" loading="lazy">
+            <img data-src="Assets\g11.jpg" alt="Gallery Image 11" loading="lazy">
+            <img data-src="Assets\g12.jpg" alt="Gallery Image 12" loading="lazy">
+            <img data-src="Assets\g13.jpg" alt="Gallery Image 13" loading="lazy">
+            <img data-src="Assets\g14.jpg" alt="Gallery Image 14" loading="lazy">
+            <img data-src="Assets\g15.jpg" alt="Gallery Image 15" loading="lazy">
+            <img data-src="Assets\g16.jpg" alt="Gallery Image 16" loading="lazy">
+            <img data-src="Assets\g17.jpg" alt="Gallery Image 17" loading="lazy">
+            <img data-src="Assets\g18.jpg" alt="Gallery Image 18" loading="lazy">
+            <img data-src="Assets\g19.jpg" alt="Gallery Image 19" loading="lazy">
+            <img data-src="Assets\g20.jpg" alt="Gallery Image 20" loading="lazy">
+            <img data-src="Assets\g21.jpg" alt="Gallery Image 21" loading="lazy">
+            <img data-src="Assets\g22.jpg" alt="Gallery Image 22" loading="lazy">
+            <img data-src="Assets\g23.jpg" alt="Gallery Image 23" loading="lazy">
+            <img data-src="Assets\g24.jpg" alt="Gallery Image 24" loading="lazy">
+            <img data-src="Assets\g25.jpg" alt="Gallery Image 25" loading="lazy">
+            <img data-src="Assets\g26.jpg" alt="Gallery Image 26" loading="lazy">
+            <img data-src="Assets\g27.jpg" alt="Gallery Image 27" loading="lazy">
+            <img data-src="Assets\g28.jpg" alt="Gallery Image 28" loading="lazy">
+            <img data-src="Assets\g29.jpg" alt="Gallery Image 29" loading="lazy">
+            <img data-src="Assets\g30.jpg" alt="Gallery Image 30" loading="lazy">
+            <img data-src="Assets\g31.jpg" alt="Gallery Image 31" loading="lazy">
+            <img data-src="Assets\g32.jpg" alt="Gallery Image 32" loading="lazy">
+            <img data-src="Assets\g33.jpg" alt="Gallery Image 33" loading="lazy">
+            <img data-src="Assets\g34.jpg" alt="Gallery Image 34" loading="lazy">
+            <img data-src="Assets\g35.jpg" alt="Gallery Image 35" loading="lazy">
+            <img data-src="Assets\g36.jpg" alt="Gallery Image 36" loading="lazy">
+            <img data-src="Assets\g37.jpg" alt="Gallery Image 37" loading="lazy">
+            <img data-src="Assets\g38.jpg" alt="Gallery Image 38" loading="lazy">
+            <img data-src="Assets\g39.jpg" alt="Gallery Image 39" loading="lazy">
+            <img data-src="Assets\g40.jpg" alt="Gallery Image 40" loading="lazy">
+            <img data-src="Assets\g41.jpg" alt="Gallery Image 41" loading="lazy">
+            <img data-src="Assets\g42.jpg" alt="Gallery Image 42" loading="lazy">
+            <img data-src="Assets\g43.jpg" alt="Gallery Image 43" loading="lazy">
+            <img data-src="Assets\g44.jpg" alt="Gallery Image 44" loading="lazy">
+        </div>
+    </main>
+    <footer>
+        <p>Email: <a href="mailto:Tygosign@gmail.com" style="color:#fff;text-decoration:underline;">Tygosign@gmail.com</a></p>
+        <p>Phone: <a href="tel:+27823515533" style="color:#fff;text-decoration:underline;">082 351 5533</a></p>
+        <p>Whatsapp: <a href="https://wa.me/27662370131" style="color:#fff;text-decoration:underline;">0662370131</a></p>
+    </footer>
+    <script>
+        // Lazy loading for browsers that don't support loading="lazy"
+        document.addEventListener("DOMContentLoaded", function() {
+            if ('loading' in HTMLImageElement.prototype) {
+                document.querySelectorAll('img[data-src]').forEach(img => {
+                    img.src = img.dataset.src;
+                });
+            } else {
+                // Fallback for older browsers
+                const images = document.querySelectorAll('img[data-src]');
+                const config = {
+                    rootMargin: '50px 0px',
+                    threshold: 0.01
+                };
+                let observer = new IntersectionObserver(function(entries, self) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            let img = entry.target;
+                            img.src = img.dataset.src;
+                            self.unobserve(img);
+                        }
+                    });
+                }, config);
+                images.forEach(image => {
+                    observer.observe(image);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
